@@ -163,7 +163,26 @@ class HomePage extends StatelessWidget {
                       bottomRight: Radius.circular(5),
                     ),
                     side: BorderSide(color: Color.fromARGB(255, 0, 0, 0))),
-              ))
+              )),
+          Container(height: 25,),
+          Opacity(
+            opacity: 0.5,
+            child: Row(
+              children: [
+                SizedBox(width: 66),
+                Text(
+                  'Already have an account?',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Text(
+                  'Sign In',
+                  style: TextStyle(fontSize: 20,
+                  decoration: TextDecoration.underline),
+                ),
+              ],
+            ),
+          ),
+          
         ])));
   }
 }
