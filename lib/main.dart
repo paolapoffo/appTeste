@@ -81,14 +81,14 @@ class HomePage extends StatelessWidget {
                 elevation: 0,
                 label: Padding(
                     padding: EdgeInsets.all(40.0),
-                    child: Text('Sign Up with email             ',
+                    child: Text('Sign Up with email                    ',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color.fromARGB(255, 0, 0, 0),
                         ))),
                 backgroundColor: Color.fromARGB(255, 255, 255, 255),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(10),
                     side: BorderSide(color: Color.fromARGB(255, 0, 0, 0))),
               )),
           Container(
@@ -123,7 +123,45 @@ class HomePage extends StatelessWidget {
                 ]),
                 backgroundColor: Color.fromARGB(255, 0, 0, 0),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      topRight: Radius.circular(5),
+                      bottomLeft: Radius.circular(5),
+                      bottomRight: Radius.circular(5),
+                    ),
+                    side: BorderSide(color: Color.fromARGB(255, 0, 0, 0))),
+              )),
+          Padding(
+              padding: EdgeInsets.only(top: 8.0),
+              child: FloatingActionButton.extended(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return NovaPage();
+                  }));
+                },
+                elevation: 0,
+                label: Row(children: [
+                  Icon(
+                    Icons.apple,
+                    size: 30,
+                  ),
+                  Padding(
+                      padding: EdgeInsets.all(40.0),
+                      child: Text('Sign Up with Apple',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                          )))
+                ]),
+                backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      topRight: Radius.circular(5),
+                      bottomLeft: Radius.circular(5),
+                      bottomRight: Radius.circular(5),
+                    ),
                     side: BorderSide(color: Color.fromARGB(255, 0, 0, 0))),
               ))
         ])));
